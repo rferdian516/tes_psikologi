@@ -1,4 +1,4 @@
-package com.example.rumarahil
+package com.example.tespsikologi
 
 import org.junit.Test
 

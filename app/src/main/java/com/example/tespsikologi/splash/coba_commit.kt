@@ -1,13 +1,12 @@
-package com.example.rumarahil
+package com.example.tespsikologi.splash
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.tespsikologi.R
 
-class coba : AppCompatActivity() {
+class coba_commit : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_coba)
-
-
+        setContentView(R.layout.activity_coba_commit)
     }
 }

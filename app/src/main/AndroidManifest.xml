@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rumarahil">
+    package="com.example.tespsikologi">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -12,14 +12,17 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_brain"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".coba"></activity>
+        <activity android:name=".splash.coba_commit"></activity>
+        <activity android:name=".auth.SignInActivity" />
+        <activity android:name=".splash.onBoarding" />
+        <activity android:name=".coba" />
         <activity android:name=".MainActivity" />
         <activity android:name=".auth.SignUpActivity" />
         <activity
-            android:name=".auth.SignInActivity"
+            android:name=".splash.splash"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +30,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

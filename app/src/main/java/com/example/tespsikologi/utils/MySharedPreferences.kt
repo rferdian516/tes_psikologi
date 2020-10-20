@@ -1,4 +1,4 @@
-package com.example.rumarahil.utils
+package com.example.tespsikologi.utils
 
 import android.content.Context
 import android.content.SharedPreferences

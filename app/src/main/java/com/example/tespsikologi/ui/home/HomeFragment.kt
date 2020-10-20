@@ -1,15 +1,12 @@
-package com.example.rumarahil.ui.home
+package com.example.tespsikologi.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.MediaController
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.rumarahil.R
+import com.example.tespsikologi.R
 
 class HomeFragment : Fragment() {
 

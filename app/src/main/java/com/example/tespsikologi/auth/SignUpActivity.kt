@@ -1,14 +1,14 @@
-package com.example.rumarahil.auth
+package com.example.tespsikologi.auth
 
 import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.rumarahil.MainActivity
-import com.example.rumarahil.R
-import com.example.rumarahil.model.User
-import com.example.rumarahil.utils.MySharedPreferences
+import com.example.tespsikologi.MainActivity
+import com.example.tespsikologi.R
+import com.example.tespsikologi.model.User
+import com.example.tespsikologi.utils.MySharedPreferences
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import java.text.SimpleDateFormat

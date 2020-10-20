@@ -7,29 +7,29 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.rumarahil.ui.home.HomeFragment"
+        android:name="com.example.tespsikologi.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.rumarahil.ui.dashboard.DashboardFragment"
+        android:name="com.example.tespsikologi.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.rumarahil.ui.notifications.NotificationsFragment"
+        android:name="com.example.tespsikologi.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.rumarahil.ProfileFragment"
+        android:name="com.example.tespsikologi.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/testFragment"
-        android:name="com.example.rumarahil.TestFragment"
+        android:name="com.example.tespsikologi.TestFragment"
         android:label="fragment_test"
         tools:layout="@layout/fragment_test" />
 </navigation>

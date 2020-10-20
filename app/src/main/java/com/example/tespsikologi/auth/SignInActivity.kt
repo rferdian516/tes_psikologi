@@ -1,20 +1,19 @@
-package com.example.rumarahil.auth
+package com.example.tespsikologi.auth
 
 import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.rumarahil.MainActivity
-import com.example.rumarahil.R
-import com.example.rumarahil.coba
-import com.example.rumarahil.model.User
-import com.example.rumarahil.utils.MySharedPreferences
+import com.example.tespsikologi.R
+import com.example.tespsikologi.coba
+import com.example.tespsikologi.model.User
+import com.example.tespsikologi.utils.MySharedPreferences
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_sign_in.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import kotlinx.android.synthetic.main.activity_sign_in.et_email as et_email1
-import kotlinx.android.synthetic.main.activity_sign_up.et_password as et_password1
+import kotlinx.android.synthetic.main.activity_sign_in.et_password as et_password1
 
 class SignInActivity : AppCompatActivity() {
     private lateinit var mLoading: ProgressDialog

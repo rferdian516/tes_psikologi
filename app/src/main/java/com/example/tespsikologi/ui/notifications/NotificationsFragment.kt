@@ -1,4 +1,4 @@
-package com.example.rumarahil.ui.notifications
+package com.example.tespsikologi.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.rumarahil.R
+import com.example.tespsikologi.R
 
 class NotificationsFragment : Fragment() {
 

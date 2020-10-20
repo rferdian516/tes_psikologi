@@ -1,4 +1,4 @@
-package com.example.rumarahil.model
+package com.example.tespsikologi.model
 
 class User (
     var id: String = "",
