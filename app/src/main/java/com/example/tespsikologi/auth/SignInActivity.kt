@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.tespsikologi.MainActivity
 import com.example.tespsikologi.R
 import com.example.tespsikologi.coba
 import com.example.tespsikologi.model.User
@@ -30,8 +31,8 @@ class SignInActivity : AppCompatActivity() {
         mDatabase = FirebaseDatabase.getInstance().getReference("User")
         myPreferences = MySharedPreferences(this@SignInActivity)
 
-        if (myPreferences.getValue("user").equals("signin")) {
-            val goMain = Intent(this@SignInActivity, coba::class.java)
+        if (myPreferences.getValue("user").equals("signIn")) {
+            val goMain = Intent(this@SignInActivity, MainActivity::class.java)
             startActivity(goMain)
             finish()
             return //Agar program dibawah line ini tidak dijalankan
@@ -42,8 +43,6 @@ class SignInActivity : AppCompatActivity() {
             startActivity(goSignUp)
             finish()
         }
-
-
 
         btn_Login.setOnClickListener {
             if (validate()) {
@@ -104,7 +103,7 @@ class SignInActivity : AppCompatActivity() {
                         myPreferences.setValue("email", user.Email)
                         myPreferences.setValue("password", user.Password)
 
-                        val goMain = Intent(this@SignInActivity, coba::class.java)
+                        val goMain = Intent(this@SignInActivity, MainActivity::class.java)
                         startActivity(goMain)
                         finish()
 

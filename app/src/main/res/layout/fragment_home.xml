@@ -1,383 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/white"
     tools:context=".ui.home.HomeFragment">
 
-    <ScrollView
+    <TextView
+        android:layout_above="@id/imgPsikologi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="Selamat Datang di \nTes Psikologi Apps"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
+
+    <ImageView
+        android:id="@+id/imgPsikologi"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/psikologi"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/tvPsikologi"
+        android:layout_below="@id/imgPsikologi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="Tes Psikologi dapat membantu untuk mengetahui gaya belajar anda"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        />
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="24dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Halo,"
-                        android:textSize="16sp"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Alif Alamsyah"
-                        android:textSize="24sp"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ic_profile"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="8dp"
-                android:paddingTop="12dp"
-                android:paddingBottom="12dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                android:background="@drawable/custom_search_box">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/ic_search"/>
-
-                <EditText
-                    android:id="@+id/edt_search_text"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:inputType="text"
-                    android:imeOptions="actionSearch"
-                    android:hint="Search"
-                    android:layout_marginLeft="8dp"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:lines="1"
-                    android:textColorHint="@android:color/darker_gray"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    android:background="@android:color/transparent"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/custom_jumbo_box">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="4dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="20dp"
-                        android:text="Tes Online"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
-                        />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="4dp"
-                        android:text="Sekarang Yuk !"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"
-                        />
-
-                    <Button
-                        android:layout_width="100dp"
-                        android:layout_height="30dp"
-                        android:text="Mulai"
-                        android:layout_marginTop="80dp"
-                        android:layout_marginLeft="8dp"
-                        android:textColor="@color/white"
-                        android:textAllCaps="false"
-                        android:background="@drawable/custom_start_box"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_kid_new"
-                        android:paddingBottom="16dp"
-                        android:paddingTop="16dp"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Kelas yang terakhir dilihat"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/custom_class_box"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_book_1"
-                        android:padding="8dp"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Matematika Dasar"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:text="45 Menit"
-                            android:textColor="@color/black"/>
-
-                    </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/ic_play"
-                        android:layout_margin="8dp"
-                        android:layout_gravity="center"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/custom_class_box_2"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_book_2"
-                        android:padding="8dp"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Matematika Dasar"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:text="45 Menit"
-                            android:textColor="@color/black"/>
-
-                    </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/ic_play"
-                        android:layout_margin="8dp"
-                        android:layout_gravity="center"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/custom_class_box_3"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_book_3"
-                        android:padding="8dp"
-                        />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Matematika Dasar"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black"
-                            />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:text="45 Menit"
-                            android:textColor="@color/black"/>
-
-                    </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/ic_play"
-                        android:layout_margin="8dp"
-                        android:layout_gravity="center"
-                        />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ikut bimbingan belajar"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    />
-
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/ic_videocall"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Rumah Rahil"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:justificationMode="inter_word"
-                    android:text="Rumah Rahil adalah salah satu tempat yang menyediakan fasilitas bimbingan belajar untuk anak sekolah."
-                    android:textColor="@color/black"
-                    />
-
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Daftar"
-                    android:textColor="@color/white"
-                    android:layout_gravity="end"
-                    android:textAllCaps="false"
-                    android:background="@drawable/custom_start_box"
-                    />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
+        android:background="@drawable/custom_btn"
+        android:hint="Mulai"
+        android:textColorHint="@color/white"
+        android:layout_alignParentBottom="true"
+        />
 
 </RelativeLayout>

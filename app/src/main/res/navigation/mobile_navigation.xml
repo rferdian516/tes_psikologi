@@ -12,24 +12,9 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.tespsikologi.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.tespsikologi.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.example.tespsikologi.ProfileFragment"
+        android:id="@+id/navigation_profile"
+        android:name="com.example.tespsikologi.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/testFragment"
-        android:name="com.example.tespsikologi.TestFragment"
-        android:label="fragment_test"
-        tools:layout="@layout/fragment_test" />
+
 </navigation>

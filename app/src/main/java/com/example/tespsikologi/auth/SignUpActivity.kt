@@ -36,6 +36,10 @@ class SignUpActivity : AppCompatActivity() {
             finish()
         }
 
+        imgBack.setOnClickListener {
+            startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
+            finish()
+        }
 
         btn_SingUp.setOnClickListener {
             if (validate()) {
