@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".UpdateProfileActivity"
+    android:orientation="vertical"
+    >
+
+    <EditText
+        android:id="@+id/et_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Anda"
+        android:inputType="text"
+        />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:text="Ganti"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_btn_update"
+        />
+
+</LinearLayout>
