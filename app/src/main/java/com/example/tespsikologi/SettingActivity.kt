@@ -40,9 +40,7 @@ class SettingActivity : AppCompatActivity() {
             myPreferences.setValue("Email", "")
             myPreferences.setValue("Password", "")
 
-            val goSignIn = Intent(this@SettingActivity, SignInActivity::class.java)
-            startActivity(goSignIn)
-//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(Intent(this@SettingActivity, SignInActivity::class.java))
             finish()
         }
     }

@@ -58,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Reynaldo Ferdian"
+                android:text="@string/nama"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 android:layout_centerHorizontal="true"
@@ -136,6 +136,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pengaturan"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlvGantiImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/imgPengaturans"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="16dp"
+                android:padding="16dp"
+                android:src="@drawable/ic_pengaturan"
+                android:background="@drawable/custom_bg_pengaturan"
+                />
+
+            <TextView
+                android:layout_toRightOf="@id/imgPengaturans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ganti Foto"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:gravity="center"

@@ -107,6 +107,7 @@ class SignUpActivity : AppCompatActivity() {
                     myPreferences.setValue("firstname", user.Name)
                     myPreferences.setValue("email", user.Email)
                     myPreferences.setValue("password", user.Password)
+                    myPreferences.setValueInt("image",user.Image)
 
                     val goMain = Intent(this@SignUpActivity, MainActivity::class.java)
                     startActivity(goMain)

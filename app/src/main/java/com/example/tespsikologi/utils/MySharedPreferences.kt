@@ -21,4 +21,14 @@ class MySharedPreferences(mContext: Context) {
     fun getValue(key: String): String? {
         return mSharedPreferences.getString(key, "")
     }
+
+    fun setValueInt(key: String, value: Int) {
+        val editor: SharedPreferences.Editor = mSharedPreferences.edit()
+        editor.putInt(key, value)
+        editor.apply()
+    }
+
+    fun getValueInt(key: String): Int? {
+        return mSharedPreferences.getInt(key, 0)
+    }
 }
