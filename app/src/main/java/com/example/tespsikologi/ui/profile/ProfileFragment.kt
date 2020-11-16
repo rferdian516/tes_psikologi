@@ -1,7 +1,6 @@
 package com.example.tespsikologi.ui.profile
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.tespsikologi.R
-import com.example.tespsikologi.SettingActivity
+import com.example.tespsikologi.auth.SignInActivity
 import com.example.tespsikologi.utils.MySharedPreferences
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -51,29 +50,42 @@ class ProfileFragment : Fragment() {
         mDatabase = FirebaseDatabase.getInstance().getReference("Koleksi")
         myPreferences = MySharedPreferences(this@ProfileFragment.context!!)
         userId = myPreferences.getValue("id")!!
-        tvUsername.text = myPreferences.getValue("name")
 
-        rlvSetting.setOnClickListener{
-            requireActivity().startActivity(Intent(this@ProfileFragment.context, SettingActivity::class.java))
+
+        tvUsername.text = myPreferences.getValue("name")
+//        imgProfile.setImageURI(my)
+
+        btn_Logout.setOnClickListener {
+            /// Menyimpan data bahwa user telah berhasil masuk
+            myPreferences.setValue("user", "")
+
+            // Menyimpan data user yang sudah masuk
+            myPreferences.setValue("id", "")
+            myPreferences.setValue("name", "")
+            myPreferences.setValue("email", "")
+            myPreferences.setValue("password", "")
+
+            startActivity(Intent(this@ProfileFragment.context, SignInActivity::class.java))
             requireActivity().finish()
         }
 
-        rlvGantiImage.setOnClickListener{
-            val intent = Intent(Intent.ACTION_PICK)
-            intent.type = "image/*"
-            startActivityForResult(intent, PHOTO)
-        }
+
+//        rlvGantiImage.setOnClickListener{
+//            val intent = Intent(Intent.ACTION_PICK)
+//            intent.type = "image/*"
+//            startActivityForResult(intent, PHOTO)
+//        }
     }
 
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == PHOTO){
-                imgProfile.setImageURI(data?.data)
-            }
-        }
-        }
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//        if (resultCode == Activity.RESULT_OK) {
+//            if (requestCode == PHOTO){
+//                imgProfile.setImageURI(data?.data)
+//            }
+//        }
+//        }
     }
 
 
