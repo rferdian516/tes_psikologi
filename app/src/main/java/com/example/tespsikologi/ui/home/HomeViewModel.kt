@@ -1,10 +1,12 @@
 package com.example.tespsikologi.ui.home
 
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class HomeViewModel : ViewModel() {
+
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is home Fragment"

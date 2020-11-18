@@ -1,49 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="@color/white"
-    tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:layout_above="@id/imgPsikologi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:text="Selamat Datang di \nTes Psikologi Apps"
-        android:textColor="@color/black"
-        android:textSize="28sp" />
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/imgPsikologi"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:src="@drawable/psikologi"
-        android:layout_centerInParent="true"
-        />
+    <data>
+        <variable
+            name="home"
+            type="com.example.tespsikologi.ui.home.HomeFragment" />
+    </data>
 
-    <TextView
-        android:id="@+id/tvPsikologi"
-        android:layout_below="@id/imgPsikologi"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:layout_centerHorizontal="true"
-        android:text="Tes Psikologi dapat membantu untuk mengetahui gaya belajar anda"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        />
-
-    <Button
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_btn"
-        android:hint="Mulai"
-        android:textColorHint="@color/white"
-        android:layout_alignParentBottom="true"
-        />
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="24dp"
+        tools:context=".ui.home.HomeFragment">
 
-</RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/imgPsikologi"
+            android:layout_marginBottom="48dp"
+            android:text="Selamat Datang di \nTes Psikologi Apps"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:id="@+id/imgPsikologi"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/psikologi" />
+
+        <TextView
+            android:id="@+id/tvPsikologi"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgPsikologi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Tes Psikologi dapat membantu untuk mengetahui gaya belajar anda"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_mulai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/custom_btn"
+            android:hint="Mulai"
+            android:textColorHint="@color/white" />
+
+    </RelativeLayout>
+</layout>

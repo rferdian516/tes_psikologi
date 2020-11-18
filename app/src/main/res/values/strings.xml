@@ -16,5 +16,8 @@
     <string name="description_onboarding_3">a place that can bring together teachers and students to become one to communicate with each other in carrying out learning</string>
 
     <string name="soal">Saya suka mendengarkan daripada membaca buku</string>
-    <string name="nama">NAMA</string>
+    <string name="pilihan2">Sesuai</string>
+    <string name="pilihan1">Sangat Sesuai</string>
+    <string name="pilihan3">Kurang Sesuai</string>
+    <string name="pilihan4">Tidak Sesuai</string>
 </resources>
