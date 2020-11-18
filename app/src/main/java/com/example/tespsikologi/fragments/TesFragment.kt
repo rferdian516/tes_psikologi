@@ -66,7 +66,7 @@ class TesFragment : Fragment() {
         Question("Sangat sulit bagi saya untuk duduk diam dalam waktu yang lama", arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")),
     )
 
-    //menampilkan quiz berdasarkan index
+    //mengambil data soal dan jawaban dari variabel qustion
     private fun setQuestion() {
         currentQuestion = question[questionIndex]
         answers = ArrayList(currentQuestion.theAnswer)
@@ -90,21 +90,26 @@ class TesFragment : Fragment() {
             score += 1
         }
         questionIndex++
-        //kondisi apabila jumlah indeks dari list pertanyaan kurang dari nomormaksimal soal yang ditampilkan
+
+        //kondisi apabila index soal kurang dari maksimal nomor soal yang ditampilkan
         if (questionIndex < maxNumberOfQuestion) {
+            //menjalankan method setQuestion
+            setQuestion()
             //refresh ui
             binding.invalidateAll()
         } else {
+            //akan menampilkan skor
             Toast.makeText(activity, score.toString(), Toast.LENGTH_SHORT).show()
 //            getScore()
         }
 
     }
 
-//    private fun randomQuestion() {
-//        question.shuffle()
-//
-//    }
+    //method untuk mengambil soal secara acak
+    private fun randomQuestion() {
+        question.shuffle()
+        setQuestion()
+    }
 
 //    private fun getScore(){
 //        if(score > 3){
@@ -121,8 +126,7 @@ class TesFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_tes, container, false)
-        setQuestion()
-//        randomQuestion()
+        randomQuestion()
         binding.quiz = this
         return binding.root
     }
