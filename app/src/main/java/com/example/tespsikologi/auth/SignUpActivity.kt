@@ -96,7 +96,7 @@ class SignUpActivity : AppCompatActivity() {
                         .format(Date())
 
                     //Mengisi variabel pada model User
-                    val user = User(mCurrentTime, mName,  mEmail, mPassword)
+                    val user = User(mCurrentTime, mName,  mEmail, mPassword,"0","0","0")
                     mDatabase.child(mCurrentTime).setValue(user)
 
                     //Menyimpan data ke shared preferences bahwa user telah berhasil masuk
@@ -107,7 +107,12 @@ class SignUpActivity : AppCompatActivity() {
                     myPreferences.setValue("firstname", user.Name)
                     myPreferences.setValue("email", user.Email)
                     myPreferences.setValue("password", user.Password)
+                    myPreferences.setValue("nilai_1", user.Nilai_1)
+                    myPreferences.setValue("nilai_2", user.Nilai_2)
+                    myPreferences.setValue("nilai_3", user.Nilai_3)
 //                    myPreferences.setValueInt("image",user.Image)
+
+
 
                     val goMain = Intent(this@SignUpActivity, MainActivity::class.java)
                     startActivity(goMain)

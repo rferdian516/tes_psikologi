@@ -14,16 +14,22 @@ import androidx.databinding.DataBindingUtil
 import com.example.tespsikologi.R
 import com.example.tespsikologi.databinding.FragmentTesBinding
 import com.example.tespsikologi.model.Question
+import com.example.tespsikologi.utils.MySharedPreferences
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_tes.*
 
 
 class TesFragment : Fragment() {
+    private lateinit var mDatabase: DatabaseReference
     lateinit var binding: FragmentTesBinding
     lateinit var currentQuestion: Question
     private var questionIndex = 0
     val maxNumberOfQuestion = 36
     lateinit var answers: ArrayList<String>
     lateinit var selectAnswer: String
+    private lateinit var myPreferences: MySharedPreferences
+    private lateinit var userId: String
     var score = 0
 
     //list soal
@@ -100,6 +106,7 @@ class TesFragment : Fragment() {
         } else {
             //akan menampilkan skor
             Toast.makeText(activity, score.toString(), Toast.LENGTH_SHORT).show()
+            mDatabase.child(myPreferences.getValue("id")!!).child("nilai_1").setValue(score.toString())
 //            getScore()
         }
 
@@ -124,6 +131,9 @@ class TesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        mDatabase = FirebaseDatabase.getInstance().getReference("User")
+        myPreferences = MySharedPreferences(requireContext())
+        userId = myPreferences.getValue("id")!!
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_tes, container, false)
         randomQuestion()
