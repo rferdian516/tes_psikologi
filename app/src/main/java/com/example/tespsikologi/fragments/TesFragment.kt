@@ -39,62 +39,74 @@ class TesFragment : Fragment() {
     //list soal
     var question=arrayListOf<Question>(
         //soal1
-        Question("1",
+        Question(
+            "1",
             "Saya suka mendengarkan informasi yang ada daripada membaca buku",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         ),
         //soal2
-        Question("2",
+        Question(
+            "2",
             "Saat saya sendiri, saya biasanya memainkan musik atau lagu atau bernyanyi",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         ),
         //soal3
-        Question("3",
+        Question(
+            "3",
             "Saat saya berbicara, saya suka mengatakan saya mendengar anda,itu terdengar bagus, itu bunyinya bagus",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         ),
         //soal4
-        Question("4",
+        Question(
+            "4",
             "Saya tahu hampir semua kata-kata dari apa yang saya dengar",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         ),
         //soal5
-        Question("5",
+        Question(
+            "5",
             "Ketika mendengar orang lain berbicara, saya biasanya membuat gambar tentang apa yang mereka katakan dalam pikiran saya",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         ),
         //soal6
-        Question("6",
+        Question(
+            "6",
             "Mudah sekali bagi saya untuk mengobrol dengan orang lain dalam waktu yang lama saat saya berbicara di telepon",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         ),
         //soal7
-        Question("7",
+        Question(
+            "7",
             "Tanpa musik, hidup amat membosankan",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         ),
         //soal8
-        Question("8",
+        Question(
+            "8",
             "Saya sangat senang berkumpul biasanya dapat dengan mudah berbicara dengan siapa saja",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         ),
         //soal9
-        Question("9",
+        Question(
+            "9",
             "Saat mengingat suatu pengalaman, saya seringkali mendengar suara dan berbicara pada diri saya mengenai pengalaman itu",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         ),
         //soal10
-        Question("10",
+        Question(
+            "10",
             "Saya lebih suka musik daripada seni lukis",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         ),
         //soal11
-        Question("11",
+        Question(
+            "11",
             "Saya lebih suka berbicara dari pada menulis",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         ),
         //soal12
-        Question("12",
+        Question(
+            "12",
             "Saya dapat mengingat dengan mudah apa yang dikatakan orang",
             arrayListOf("Sangat Sesuai", "Sesuai", "Kurang Sesuai", "Tidak Sesuai")
         )
@@ -104,8 +116,7 @@ class TesFragment : Fragment() {
     private fun setQuestion() {
         currentQuestion=question[questionIndex]
         answers=ArrayList(currentQuestion.theAnswer)
-        numbers= currentQuestion.theNumber
-//        answers.shuffle()
+
         Log.d("ANSWERGROUP", answers[0] + " " + answers[1] + " " + answers[2] + " " + answers[3])
         Log.d("ANSWERREAL", currentQuestion.theAnswer[0])
     }
@@ -130,22 +141,11 @@ class TesFragment : Fragment() {
             //refresh ui
             binding.invalidateAll()
         } else {
-            //akan menampilkan skor
-//            Toast.makeText(activity, score.toString(), Toast.LENGTH_SHORT).show()
-
-//            val intent = Intent(this@TesFragment.context, TesFragment2::class.java)
-//            startActivity(intent)
-
             getScore()
         }
 
     }
 
-    //method untuk mengambil soal secara acak
-//    private fun randomQuestion() {
-////        question.shuffle()
-//        setQuestion()
-//    }
 
     private fun getScore() {
         mDatabase.child(myPreferences.getValue("id")!!).child("nilai_1")
@@ -154,12 +154,6 @@ class TesFragment : Fragment() {
         Navigation.findNavController(requireView())
             .navigate(R.id.action_tesFragment_to_tesFragment2)
 
-//        if(score > 3){
-//            Toast.makeText(activity, "WON", Toast.LENGTH_SHORT).show()
-//        }
-//        else{
-//            Toast.makeText(activity, "LOSE", Toast.LENGTH_SHORT).show()
-//        }
     }
 
     override fun onCreateView(
@@ -192,7 +186,5 @@ class TesFragment : Fragment() {
         btn_jawaban_empat.setOnClickListener {
             checkAnswer(btn_jawaban_empat.text.toString())
         }
-
     }
-
 }

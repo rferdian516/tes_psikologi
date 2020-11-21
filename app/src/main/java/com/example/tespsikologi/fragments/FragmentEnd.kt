@@ -23,10 +23,10 @@ class FragmentEnd : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_end, container, false)
+        binding=DataBindingUtil.inflate(inflater, R.layout.fragment_end, container, false)
 
         binding.btnMove.setOnClickListener {
-            val intent = Intent(this@FragmentEnd.context, MainActivity::class.java)
+            val intent=Intent(this@FragmentEnd.context, MainActivity::class.java)
             startActivity(intent)
         }
         return binding.root
