@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="move"
+            type="com.example.tespsikologi.fragments.FragmentEnd" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.FragmentEnd">
+
+        <Button
+            android:id="@+id/btn_move"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="16dp"
+            android:text="Move"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</layout>

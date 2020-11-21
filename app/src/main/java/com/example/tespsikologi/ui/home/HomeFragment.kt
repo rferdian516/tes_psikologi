@@ -13,6 +13,7 @@ import androidx.navigation.Navigation
 import com.example.tespsikologi.R
 import com.example.tespsikologi.TesActivity
 import com.example.tespsikologi.databinding.FragmentHomeBinding
+import com.example.tespsikologi.fragments.TesFragment
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
@@ -36,7 +37,8 @@ class HomeFragment : Fragment() {
 //            textView.text = it
 //        })
         binding.btnMulai.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_navigation_home_to_tesFragment)
+            val intent = Intent(this@HomeFragment.context, TesActivity::class.java)
+            startActivity(intent)
         }
         return binding.root
     }

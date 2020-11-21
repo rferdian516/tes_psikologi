@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tes_navigation"
+    app:startDestination="@id/tesFragment">
+
+    <fragment
+        android:id="@+id/tesFragment"
+        android:name="com.example.tespsikologi.fragments.TesFragment"
+        android:label="TesFragment" >
+        <action
+            android:id="@+id/action_tesFragment_to_tesFragment2"
+            app:destination="@id/tesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tesFragment2"
+        android:name="com.example.tespsikologi.fragments.TesFragment2"
+        android:label="TesFragment2" >
+        <action
+            android:id="@+id/action_tesFragment2_to_tesFragment3"
+            app:destination="@id/tesFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/tesFragment3"
+        android:name="com.example.tespsikologi.fragments.TesFragment3"
+        android:label="TesFragment3" >
+        <action
+            android:id="@+id/action_tesFragment3_to_fragmentEnd"
+            app:destination="@id/fragmentEnd" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEnd"
+        android:name="com.example.tespsikologi.fragments.FragmentEnd"
+        android:label="FragmentEnd" />
+</navigation>

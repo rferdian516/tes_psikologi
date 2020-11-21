@@ -9,21 +9,12 @@
         android:id="@+id/navigation_home"
         android:name="com.example.tespsikologi.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_navigation_home_to_tesFragment"
-            app:destination="@id/tesFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.tespsikologi.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/tesFragment"
-        android:name="com.example.tespsikologi.fragments.TesFragment"
-        android:label="fragment_tes"
-        tools:layout="@layout/fragment_tes" />
 
 </navigation>

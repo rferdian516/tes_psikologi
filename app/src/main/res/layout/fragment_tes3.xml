@@ -5,8 +5,8 @@
     <data>
 
         <variable
-            name="quiz1"
-            type="com.example.tespsikologi.fragments.TesFragment" />
+            name="quiz3"
+            type="com.example.tespsikologi.fragments.TesFragment3" />
     </data>
 
     <ScrollView
@@ -18,7 +18,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp"
-            tools:context=".fragments.TesFragment">
+            tools:context=".fragments.TesFragment3">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -29,9 +30,9 @@
                     android:id="@+id/text_onboarding_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{quiz1.Numbers}"
-                    android:textColor="@color/dark_blue"
                     android:layout_marginEnd="6dp"
+                    android:text="@{quiz3.Numbers}"
+                    android:textColor="@color/dark_blue"
                     android:textSize="19sp"
                     android:textStyle="bold" />
 
@@ -43,10 +44,7 @@
                     android:textColor="@color/dark_blue"
                     android:textSize="19sp"
                     android:textStyle="bold" />
-
-
             </LinearLayout>
-
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/text_onboarding_description"
@@ -71,7 +69,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:gravity="center"
-                    android:text="@{quiz1.currentQuestion.theQuestion}"
+                    android:text="@{quiz3.currentQuestion3.theQuestion}"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -91,25 +89,25 @@
                     android:layout_height="40dp"
                     android:layout_marginVertical="8dp"
                     android:background="@drawable/custom_btn"
-                    android:text="@{quiz1.answers[0]}"
                     android:gravity="center"
+                    android:text="@{quiz3.answers3[0]}"
                     android:textAlignment="gravity"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_jawaban_dua"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginVertical="8dp"
-                    android:gravity="center"
                     android:background="@drawable/custom_btn"
-                    android:text="@{quiz1.answers[1]}"
+                    android:gravity="center"
+                    android:text="@{quiz3.answers3[1]}"
                     android:textAlignment="gravity"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_jawaban_tiga"
@@ -117,25 +115,25 @@
                     android:layout_height="40dp"
                     android:layout_marginVertical="8dp"
                     android:background="@drawable/custom_btn"
-                    android:textAlignment="gravity"
                     android:gravity="center"
-                    android:text="@{quiz1.answers[2]}"
+                    android:text="@{quiz3.answers3[2]}"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btn_jawaban_empat"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:textAlignment="gravity"
                     android:layout_marginVertical="8dp"
                     android:background="@drawable/custom_btn"
-                    android:text="@{quiz1.answers[3]}"
-                    android:textSize="16sp"
                     android:gravity="center"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
+                    android:text="@{quiz3.answers3[3]}"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
