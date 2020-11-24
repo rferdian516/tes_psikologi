@@ -7,13 +7,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.tespsikologi.R
 import com.example.tespsikologi.auth.SignInActivity
+import com.example.tespsikologi.model.User
 import com.example.tespsikologi.utils.MySharedPreferences
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.fragment_end.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 class ProfileFragment : Fragment() {
@@ -47,14 +49,12 @@ class ProfileFragment : Fragment() {
         mLoading.setCancelable(false)
         mLoading.setMessage("Loading ...")
 
-        mDatabase = FirebaseDatabase.getInstance().getReference("Koleksi")
+        mDatabase = FirebaseDatabase.getInstance().getReference("User")
         myPreferences = MySharedPreferences(this@ProfileFragment.context!!)
         userId = myPreferences.getValue("id")!!
 
 
-        tvUsername.text = myPreferences.getValue("name")
-//        imgProfile.setImageURI(my)
-
+        readData()
         btn_Logout.setOnClickListener {
             /// Menyimpan data bahwa user telah berhasil masuk
             myPreferences.setValue("user", "")
@@ -70,22 +70,31 @@ class ProfileFragment : Fragment() {
         }
 
 
-//        rlvGantiImage.setOnClickListener{
-//            val intent = Intent(Intent.ACTION_PICK)
-//            intent.type = "image/*"
-//            startActivityForResult(intent, PHOTO)
-//        }
+    }
+
+    //read Username
+    fun readData(){
+        mLoading.show()
+        mDatabase.child(userId)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onCancelled(error: DatabaseError) {
+                    mLoading.dismiss()
+                    Toast.makeText(
+                        this@ProfileFragment.context,
+                        "${error.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    mLoading.dismiss()
+                    val name = snapshot.getValue(User::class.java)
+                    tvUsername.setText(name!!.Name)
+                }
+            })
     }
 
 
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//        if (resultCode == Activity.RESULT_OK) {
-//            if (requestCode == PHOTO){
-//                imgProfile.setImageURI(data?.data)
-//            }
-//        }
-//        }
     }
 
 

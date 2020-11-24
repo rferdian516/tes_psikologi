@@ -20,4 +20,8 @@
     <string name="pilihan1">Sangat Sesuai</string>
     <string name="pilihan3">Kurang Sesuai</string>
     <string name="pilihan4">Tidak Sesuai</string>
+
+    <string name="nilai">NILAI</string>
+    <string name="move">Move</string>
+
 </resources>

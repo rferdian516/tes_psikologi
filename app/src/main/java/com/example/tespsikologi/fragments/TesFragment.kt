@@ -15,6 +15,7 @@ import androidx.navigation.Navigation
 //import com.airbnb.lottie.LottieAnimationView
 import com.example.tespsikologi.R
 import com.example.tespsikologi.TesActivity
+import com.example.tespsikologi.databinding.FragmentTes2Binding
 import com.example.tespsikologi.databinding.FragmentTesBinding
 import com.example.tespsikologi.model.Question
 import com.example.tespsikologi.utils.MySharedPreferences
@@ -27,14 +28,14 @@ class TesFragment : Fragment() {
     private lateinit var mDatabase: DatabaseReference
     lateinit var binding: FragmentTesBinding
     lateinit var currentQuestion: Question
-    private var questionIndex=0
     lateinit var numbers: String
+    private var questionIndex=0
     val maxNumberOfQuestion=11
     lateinit var answers: ArrayList<String>
-    lateinit var selectAnswer: String
     private lateinit var myPreferences: MySharedPreferences
     private lateinit var userId: String
     var score=0
+    var finalscore=0
 
     //list soal
     var question=arrayListOf<Question>(
@@ -116,6 +117,7 @@ class TesFragment : Fragment() {
     private fun setQuestion() {
         currentQuestion=question[questionIndex]
         answers=ArrayList(currentQuestion.theAnswer)
+        numbers=currentQuestion.theNumber
 
         Log.d("ANSWERGROUP", answers[0] + " " + answers[1] + " " + answers[2] + " " + answers[3])
         Log.d("ANSWERREAL", currentQuestion.theAnswer[0])
@@ -141,6 +143,7 @@ class TesFragment : Fragment() {
             //refresh ui
             binding.invalidateAll()
         } else {
+
             getScore()
         }
 
@@ -148,9 +151,10 @@ class TesFragment : Fragment() {
 
 
     private fun getScore() {
+        //rata-rata attribut 1
+        finalscore = score/12
         mDatabase.child(myPreferences.getValue("id")!!).child("nilai_1")
-            .setValue(score.toString())
-
+            .setValue(finalscore.toString())
         Navigation.findNavController(requireView())
             .navigate(R.id.action_tesFragment_to_tesFragment2)
 

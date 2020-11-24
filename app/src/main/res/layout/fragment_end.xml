@@ -15,11 +15,36 @@
         android:layout_height="match_parent"
         tools:context=".fragments.FragmentEnd">
 
+        <TextView
+            android:id="@+id/tv_nilai1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nilai"
+            android:layout_centerInParent="true"
+            android:layout_above="@+id/tv_nilai2"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/tv_nilai2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nilai"
+            android:layout_centerInParent="true"
+            android:layout_above="@+id/tv_nilai3"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/tv_nilai3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nilai"
+            android:layout_centerInParent="true"
+            android:layout_above="@+id/btn_move"
+            android:layout_marginBottom="10dp"/>
+
         <Button
             android:id="@+id/btn_move"
             android:layout_centerInParent="true"
             android:layout_marginHorizontal="16dp"
-            android:text="Move"
+            android:text="@string/move"
             android:background="@color/colorAccent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
