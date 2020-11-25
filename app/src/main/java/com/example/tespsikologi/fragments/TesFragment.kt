@@ -34,8 +34,8 @@ class TesFragment : Fragment() {
     lateinit var answers: ArrayList<String>
     private lateinit var myPreferences: MySharedPreferences
     private lateinit var userId: String
-    var score=0
-    var finalscore=0
+    var score : Double  = 0.0
+    var finalscore : Double = 0.0
 
     //list soal
     var question=arrayListOf<Question>(
@@ -153,8 +153,8 @@ class TesFragment : Fragment() {
     private fun getScore() {
         //rata-rata attribut 1
         finalscore = score/12
-        mDatabase.child(myPreferences.getValue("id")!!).child("nilai_1")
-            .setValue(finalscore.toString())
+            mDatabase.child(myPreferences.getValue("id")!!).child("nilai_1")
+                .setValue(finalscore.toString())
         Navigation.findNavController(requireView())
             .navigate(R.id.action_tesFragment_to_tesFragment2)
 

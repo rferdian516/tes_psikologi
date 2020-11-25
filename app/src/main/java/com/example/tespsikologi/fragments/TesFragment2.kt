@@ -30,8 +30,8 @@ class TesFragment2 : Fragment() {
     lateinit var answers2: ArrayList<String>
     private lateinit var myPreferences: MySharedPreferences
     private lateinit var userId: String
-    var score2=0
-    var finalscore2=0
+    var score2 : Double  = 0.0
+    var finalscore2 : Double = 0.0
 
     var question2=arrayListOf<Question>(
         //soal13
