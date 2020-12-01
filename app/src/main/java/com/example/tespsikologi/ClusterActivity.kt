@@ -48,7 +48,7 @@ class ClusterActivity : AppCompatActivity() {
         getCluster()
 
         btn_back.setOnClickListener {
-            startActivity(Intent(this@ClusterActivity,ProfileFragment::class.java))
+            onBackPressed()
             finish()
         }
     }
