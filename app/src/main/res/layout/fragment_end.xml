@@ -16,38 +16,59 @@
         tools:context=".fragments.FragmentEnd">
 
         <TextView
-            android:id="@+id/tv_nilai1"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_selamat"
+            android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:text="@string/nilai"
-            android:layout_centerInParent="true"
-            android:layout_above="@+id/tv_nilai2"
-            android:layout_marginBottom="10dp"/>
-        <TextView
-            android:id="@+id/tv_nilai2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nilai"
-            android:layout_centerInParent="true"
-            android:layout_above="@+id/tv_nilai3"
-            android:layout_marginBottom="10dp"/>
-        <TextView
-            android:id="@+id/tv_nilai3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nilai"
-            android:layout_centerInParent="true"
-            android:layout_above="@+id/btn_move"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_above="@id/img_result"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="@string/Terimakasih"/>
 
-        <Button
-            android:id="@+id/btn_move"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_result"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
             android:layout_centerInParent="true"
-            android:layout_marginHorizontal="16dp"
-            android:text="@string/move"
-            android:background="@color/colorAccent"
+            android:src="@drawable/img_resultt"
+            android:contentDescription="@string/img_hasil" />
+
+        <TextView
+            android:id="@+id/tv_kelompok"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_result"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="@string/kelompok"
+            android:textSize="40dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_kelompok"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_ulangi"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_btn"
+                android:hint="@string/ulangi_tes"
+                android:textColorHint="@color/white" />
+
+            <Button
+                android:id="@+id/btn_home"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/custom_btn"
+                android:hint="@string/home"
+                android:textColorHint="@color/white" />
+        </LinearLayout>
     </RelativeLayout>
 </layout>

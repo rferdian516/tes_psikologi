@@ -15,9 +15,9 @@
         android:roundIcon="@mipmap/ic_brain"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TesActivity"/>
+        <activity android:name=".ClusterActivity"></activity>
+        <activity android:name=".TesActivity" />
         <activity android:name=".UpdateProfileActivity" />
-        <activity android:name=".SettingActivity" />
         <activity android:name=".splash.coba_commit" />
         <activity android:name=".auth.SignInActivity" />
         <activity android:name=".splash.onBoarding" />

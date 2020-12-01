@@ -10,7 +10,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import com.example.tespsikologi.ClusterActivity
 import com.example.tespsikologi.R
+import com.example.tespsikologi.UpdateProfileActivity
 import com.example.tespsikologi.auth.SignInActivity
 import com.example.tespsikologi.model.User
 import com.example.tespsikologi.utils.MySharedPreferences
@@ -70,6 +72,13 @@ class ProfileFragment : Fragment() {
         }
 
 
+        btn_edit.setOnClickListener {
+            startActivity(Intent(this@ProfileFragment.context,UpdateProfileActivity::class.java))
+        }
+
+        rlv_Kelompok.setOnClickListener{
+            startActivity(Intent(this@ProfileFragment.context, ClusterActivity::class.java))
+        }
     }
 
     //read Username

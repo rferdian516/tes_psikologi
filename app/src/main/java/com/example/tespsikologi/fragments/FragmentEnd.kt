@@ -40,14 +40,15 @@ class FragmentEnd : Fragment() {
         // Inflate the layout for this fragment
         binding=DataBindingUtil.inflate(inflater, R.layout.fragment_end, container, false)
 
-        binding.btnMove.setOnClickListener {
+        binding.btnHome.setOnClickListener {
             val intent=Intent(this@FragmentEnd.context, MainActivity::class.java)
             startActivity(intent)
         }
+        binding.btnUlangi.setOnClickListener {
+            val intent = Intent(this@FragmentEnd.context, TesActivity::class.java)
+            startActivity(intent)
+        }
         return binding.root
-//        mDatabase.child(myPreferences.getValue("id")!!).child("nilai_1")
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -84,9 +85,9 @@ class FragmentEnd : Fragment() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     mLoading.dismiss()
                     val nilai = snapshot.getValue(User::class.java)
-                    tv_nilai1.setText(nilai?.Nilai_1)
-                    tv_nilai2.setText(nilai?.Nilai_2)
-                    tv_nilai3.setText(nilai?.Nilai_3)
+//                    tv_nilai1.setText(nilai?.Nilai_1)
+//                    tv_nilai2.setText(nilai?.Nilai_2)
+//                    tv_nilai3.setText(nilai?.Nilai_3)
 
                     //nilai C1
                     var A = (nilai!!.Nilai_1.toDouble()-c.C11)*(nilai!!.Nilai_1.toDouble()-c.C11)
@@ -143,16 +144,19 @@ class FragmentEnd : Fragment() {
                     {
                         mDatabase.child(myPreferences.getValue("id")!!).child("kelompok")
                             .setValue("AUDIOTORI")
+                        tv_kelompok.setText(kelompok.Kelompok)
                     }
                     else if (kelompok!!.Hasil_2.toDouble() < kelompok!!.Hasil_1.toDouble() && kelompok!!.Hasil_2.toDouble() < kelompok!!.Hasil_3.toDouble() )
                     {
                         mDatabase.child(myPreferences.getValue("id")!!).child("kelompok")
                             .setValue("VISUAL")
+                        tv_kelompok.setText(kelompok.Kelompok)
                     }
                     else if (kelompok!!.Hasil_3.toDouble() < kelompok!!.Hasil_1.toDouble() && kelompok!!.Hasil_3.toDouble() < kelompok!!.Hasil_2.toDouble() )
                     {
                         mDatabase.child(myPreferences.getValue("id")!!).child("kelompok")
                             .setValue("KINESTETIK")
+                        tv_kelompok.setText(kelompok.Kelompok)
                     }
 
 

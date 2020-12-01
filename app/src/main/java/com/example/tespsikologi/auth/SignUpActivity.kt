@@ -24,14 +24,14 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
 
 
-        mLoading = ProgressDialog(this@SignUpActivity)
+        mLoading=ProgressDialog(this@SignUpActivity)
         mLoading.setCancelable(false)
         mLoading.setMessage("Loading...")
-        mDatabase = FirebaseDatabase.getInstance().getReference("User")
-        myPreferences = MySharedPreferences(this@SignUpActivity)
+        mDatabase=FirebaseDatabase.getInstance().getReference("User")
+        myPreferences=MySharedPreferences(this@SignUpActivity)
 
         tvSignIn.setOnClickListener {
-            val goSignIn = Intent(this@SignUpActivity, SignInActivity::class.java)
+            val goSignIn=Intent(this@SignUpActivity, SignInActivity::class.java)
             startActivity(goSignIn)
             finish()
         }
@@ -43,9 +43,9 @@ class SignUpActivity : AppCompatActivity() {
 
         btn_SingUp.setOnClickListener {
             if (validate()) {
-                val mName = et_name.text.toString()
-                val mEmail = et_email.text.toString()
-                val mPassword = et_password.text.toString()
+                val mName=et_name.text.toString()
+                val mEmail=et_email.text.toString()
+                val mPassword=et_password.text.toString()
 
                 signUp(mName, mEmail, mPassword)
             }
@@ -56,28 +56,31 @@ class SignUpActivity : AppCompatActivity() {
         //Mengecek apakah form sudah terisi atau belum
         if (et_name.text.isEmpty()) {
             et_name.requestFocus()
-            et_name.error = "Enter your first name"
+            et_name.error="masukan nama"
             return false
         }
         if (et_email.text.isEmpty()) {
             et_email.requestFocus()
-            et_email.error = "Enter your email"
+            et_email.error="masukan email"
             return false
         }
         if (et_password.text.isEmpty()) {
             et_password.requestFocus()
-            et_password.error = "Enter your password"
+            et_password.error="masukan password"
             return false
         }
         return true
     }
+
+
+
 
     private fun signUp(mName: String, mEmail: String, mPassword: String) {
         //Menampilkan Loading
         mLoading.show()
 
         //Mengecek apakah email sudah digunakan
-        val cekEmail = mDatabase.orderByChild("email").equalTo(mEmail)
+        val cekEmail=mDatabase.orderByChild("email").equalTo(mEmail)
 
         cekEmail.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
@@ -92,11 +95,23 @@ class SignUpActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.value == null) {
                     //Get Date Time Now
-                    val mCurrentTime = SimpleDateFormat("yyyyMMdd:HHmmss", Locale.getDefault())
+                    val mCurrentTime=SimpleDateFormat("yyyyMMdd:HHmmss", Locale.getDefault())
                         .format(Date())
 
                     //Mengisi variabel pada model User
-                    val user = User(mCurrentTime, mName,  mEmail, mPassword,"0","0","0","0","0","0","")
+                    val user=User(
+                        mCurrentTime,
+                        mName,
+                        mEmail,
+                        mPassword,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        ""
+                    )
                     mDatabase.child(mCurrentTime).setValue(user)
 
                     //Menyimpan data ke shared preferences bahwa user telah berhasil masuk
@@ -114,11 +129,10 @@ class SignUpActivity : AppCompatActivity() {
                     myPreferences.setValue("hasil_2", user.Hasil_2)
                     myPreferences.setValue("hasil_3", user.Hasil_3)
                     myPreferences.setValue("kelompok", user.Kelompok)
-//                    myPreferences.setValueInt("image",user.Image)
+//                  myPreferences.setValueInt("image",user.Image)
 
 
-
-                    val goMain = Intent(this@SignUpActivity, MainActivity::class.java)
+                    val goMain=Intent(this@SignUpActivity, MainActivity::class.java)
                     startActivity(goMain)
                     finish()
 
