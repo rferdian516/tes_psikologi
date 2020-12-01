@@ -52,33 +52,15 @@
                 android:layout_height="150dp"
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/ic_profile" />
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/tvUsername"
                 android:layout_width="wrap_content"
-                android:layout_height="108dp"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/nama"
+                android:textSize="28sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tvUsername"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/nama"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
-
-                <ImageButton
-                    android:id="@+id/btn_edit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/ic_edit"
-                    android:backgroundTint="@color/white"/>
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -96,7 +78,7 @@
         android:layout_alignParentBottom="true">
 
         <RelativeLayout
-            android:id="@+id/rlv_Kelompok"
+            android:id="@+id/rlv_Gaya"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -115,7 +97,7 @@
                 android:layout_toRightOf="@id/imgKelompok"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kelompok Belajar"
+                android:text="Gaya Belajar"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -133,7 +115,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rlvSetting"
+            android:id="@+id/rlv_Edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -154,7 +136,7 @@
                 android:layout_toRightOf="@id/imgPengaturan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pengaturan"
+                android:text="Edit Nama"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:gravity="center"

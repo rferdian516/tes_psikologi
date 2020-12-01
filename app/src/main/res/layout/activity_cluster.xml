@@ -14,12 +14,12 @@
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_back"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="8dp"
-            android:padding="8dp"
+            android:layout_marginTop="16dp"
             android:background="@android:color/transparent"
-            />
+            android:padding="8dp"
+            android:src="@drawable/ic_back" />
+
         <TextView
             android:id="@+id/tv_kelompok"
             android:layout_width="match_parent"
@@ -29,36 +29,37 @@
             android:gravity="center"
             android:text="@string/kelompok"
             android:textSize="40dp" />
+
         <TextView
             android:id="@+id/tv_keterangan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat"
             android:layout_below="@+id/tv_kelompok"
+            android:fontFamily="@font/montserrat"
             android:gravity="center"
-            android:text="@string/gaya"/>
+            android:text="@string/gaya" />
 
         <TextView
             android:id="@+id/tv_gayabelajar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_keterangan"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/montserrat"
-            android:justificationMode="inter_word"
             android:gravity="center"
+            android:justificationMode="inter_word"
             android:text="@string/kelompok" />
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/pc_attribut"
             android:layout_width="match_parent"
-            android:layout_below="@+id/tv_gayabelajar"
             android:layout_height="500dp"
+            android:layout_below="@+id/tv_gayabelajar"
+            android:layout_alignParentBottom="true"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_alignParentBottom="true"/>
+            android:layout_marginBottom="20dp" />
     </RelativeLayout>
 </ScrollView>

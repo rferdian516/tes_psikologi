@@ -69,13 +69,12 @@ class ProfileFragment : Fragment() {
             requireActivity().finish()
         }
 
-
-        btn_edit.setOnClickListener {
-            startActivity(Intent(this@ProfileFragment.context,UpdateProfileActivity::class.java))
+        rlv_Gaya.setOnClickListener{
+            startActivity(Intent(this@ProfileFragment.context, ClusterActivity::class.java))
         }
 
-        rlv_Kelompok.setOnClickListener{
-            startActivity(Intent(this@ProfileFragment.context, ClusterActivity::class.java))
+        rlv_Edit.setOnClickListener {
+            startActivity(Intent(this@ProfileFragment.context,UpdateProfileActivity::class.java))
         }
     }
 

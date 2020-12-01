@@ -35,8 +35,7 @@ class UpdateProfileActivity : AppCompatActivity() {
         readData()
 
         btn_back.setOnClickListener {
-            val goBack = Intent(this@UpdateProfileActivity, ProfileFragment::class.java)
-            startActivity(goBack)
+            onBackPressed()
             finish()
         }
 
