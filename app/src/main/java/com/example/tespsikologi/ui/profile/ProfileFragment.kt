@@ -60,13 +60,11 @@ class ProfileFragment : Fragment() {
         btn_Logout.setOnClickListener {
             /// Menyimpan data bahwa user telah berhasil masuk
             myPreferences.setValue("user", "")
-
             // Menyimpan data user yang sudah masuk
             myPreferences.setValue("id", "")
             myPreferences.setValue("name", "")
             myPreferences.setValue("email", "")
             myPreferences.setValue("password", "")
-
             startActivity(Intent(this@ProfileFragment.context, SignInActivity::class.java))
             requireActivity().finish()
         }

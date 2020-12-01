@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ClusterActivity">
 
-    <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/pc_attribut"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            />
+        <TextView
+            android:id="@+id/tv_kelompok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_back"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="@string/kelompok"
+            android:textSize="40dp" />
+        <TextView
+            android:id="@+id/tv_keterangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:layout_below="@+id/tv_kelompok"
+            android:gravity="center"
+            android:text="@string/gaya"/>
+
+        <TextView
+            android:id="@+id/tv_gayabelajar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_keterangan"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/montserrat"
+            android:justificationMode="inter_word"
+            android:gravity="center"
+            android:text="@string/kelompok" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pc_attribut"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tv_gayabelajar"
+            android:layout_height="500dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</ScrollView>

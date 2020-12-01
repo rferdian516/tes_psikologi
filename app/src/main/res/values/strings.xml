@@ -31,5 +31,6 @@
     <string name="Terimakasih">Terima kasih telah menyelesaikan tes psikologi dan kamu termasuk kelompok belajar </string>
     <string name="ulangi_tes">ULANGI TES</string>
     <string name="nama">Nama</string>
+    <string name="gaya">Cara belajar yang tepat untuk anda adalah </string>
 
 </resources>

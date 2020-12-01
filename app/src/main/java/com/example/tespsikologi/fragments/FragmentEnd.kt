@@ -123,7 +123,9 @@ class FragmentEnd : Fragment() {
             })
 
 
-    }fun getCluster(){
+    }
+
+    fun getCluster(){
         mLoading.show()
         mDatabase.child(userId)
             .addValueEventListener(object : ValueEventListener {

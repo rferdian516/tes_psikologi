@@ -32,7 +32,7 @@ class UpdateProfileActivity : AppCompatActivity() {
         userId = myPreferences.getValue("id")!!
 
 
-        setValue()
+        readData()
 
         btn_back.setOnClickListener {
             val goBack = Intent(this@UpdateProfileActivity, ProfileFragment::class.java)
@@ -49,7 +49,7 @@ class UpdateProfileActivity : AppCompatActivity() {
 
     }
 
-    private fun setValue() {
+    private fun readData() {
         mLoading.show()
         mDatabase.child(userId)
             .addValueEventListener(object : ValueEventListener {
