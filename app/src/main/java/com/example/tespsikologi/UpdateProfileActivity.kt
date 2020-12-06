@@ -83,8 +83,7 @@ class UpdateProfileActivity : AppCompatActivity() {
         mDatabase.child(myPreferences.getValue("id")!!).child("name")
             .setValue(mNama)
 
-        val goMain = Intent(this@UpdateProfileActivity, ProfileFragment::class.java)
-        startActivity(goMain)
+        onBackPressed()
         finish()
 
         mLoading.dismiss()

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,8 +18,10 @@ import com.example.tespsikologi.auth.SignInActivity
 import com.example.tespsikologi.model.User
 import com.example.tespsikologi.utils.MySharedPreferences
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.activity_update_profile.*
 import kotlinx.android.synthetic.main.fragment_end.*
 import kotlinx.android.synthetic.main.fragment_profile.*
+import java.lang.NullPointerException
 
 class ProfileFragment : Fragment() {
     private lateinit var mLoading: ProgressDialog
@@ -55,7 +58,6 @@ class ProfileFragment : Fragment() {
         myPreferences = MySharedPreferences(this@ProfileFragment.context!!)
         userId = myPreferences.getValue("id")!!
 
-
         readData()
         btn_Logout.setOnClickListener {
             /// Menyimpan data bahwa user telah berhasil masuk
@@ -79,7 +81,7 @@ class ProfileFragment : Fragment() {
     }
 
     //read Username
-    fun readData(){
+    private fun readData(){
         mLoading.show()
         mDatabase.child(userId)
             .addValueEventListener(object : ValueEventListener {
@@ -94,8 +96,30 @@ class ProfileFragment : Fragment() {
 
                 override fun onDataChange(snapshot: DataSnapshot) {
                     mLoading.dismiss()
-                    val name = snapshot.getValue(User::class.java)
-                    tvUsername.setText(name!!.Name)
+                    val user = snapshot.getValue(User::class.java)
+//                    var nama = user?.Name
+
+//                    tvUsername.text = "$nama"
+//                    tvUsername.setText(user!!.Name)
+//                    mDatabase.child(userId).child("name").setValue(tvUsername.text)
+                    try {
+                        tvUsername.text =user!!.Name
+                    }catch (ignored : NullPointerException){
+
+                    }
+
+                    Log.d("ProfileFragment", user.toString())
+
+
+
+//                    val nUserName = tvUsername.text
+//                    if (tvUsername.text == null){
+//                        tvUsername.text = "name?.Name"
+//                    } else
+//                    {
+//                        tvUsername.text = name?.Name
+//                    }
+
                 }
             })
     }

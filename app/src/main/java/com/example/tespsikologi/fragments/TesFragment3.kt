@@ -146,9 +146,8 @@ class TesFragment3 : Fragment() {
     private fun getScore() {
         //rata-rata attribut 1
         finalscore3=score3 / 12
-        mDatabase.child(myPreferences.getValue("id")!!).child("nilai_3")
-            .setValue(finalscore3.toString())
-
+//        mDatabase.child(myPreferences.getValue("id")!!).child("nilai_3").setValue(finalscore3.toString())
+        mDatabase.child(userId).child("nilai_3").setValue(finalscore3.toString())
         Navigation.findNavController(requireView())
             .navigate(R.id.action_tesFragment3_to_fragmentEnd)
     }

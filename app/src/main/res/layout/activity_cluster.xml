@@ -52,7 +52,16 @@
             android:justificationMode="inter_word"
             android:text="@string/kelompok" />
 
-        <com.github.mikephil.charting.charts.PieChart
+<!--        <com.github.mikephil.charting.charts.PieChart-->
+<!--            android:id="@+id/pc_attribut"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="500dp"-->
+<!--            android:layout_below="@+id/tv_gayabelajar"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:layout_marginBottom="20dp" />-->
+        <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/pc_attribut"
             android:layout_width="match_parent"
             android:layout_height="500dp"
