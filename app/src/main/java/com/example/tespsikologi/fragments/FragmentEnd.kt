@@ -21,6 +21,7 @@ import com.example.tespsikologi.utils.MySharedPreferences
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_end.*
 import kotlinx.android.synthetic.main.fragment_profile.*
+import java.lang.Math.pow
 import java.lang.StringBuilder
 import kotlin.math.pow
 import kotlin.math.sqrt
@@ -91,6 +92,7 @@ class FragmentEnd : Fragment() {
 
                     //nilai C1
                     var A = (nilai!!.Nilai_1.toDouble()-c.C11)*(nilai!!.Nilai_1.toDouble()-c.C11)
+//                    var i : Double = pow(nilai!!.Nilai_1.toDouble()-c.C11)
                     var B = (nilai!!.Nilai_2.toDouble()-c.C12)*(nilai!!.Nilai_2.toDouble()-c.C12)
                     var C = (nilai!!.Nilai_3.toDouble()-c.C13)*(nilai!!.Nilai_3.toDouble()-c.C13)
                     //perhitungan Distance

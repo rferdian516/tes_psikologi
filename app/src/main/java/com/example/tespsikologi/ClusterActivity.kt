@@ -114,7 +114,7 @@ class ClusterActivity : AppCompatActivity() {
                     val barChart = findViewById<BarChart>(R.id.pc_attribut)
                     val nilai = snapshot.getValue(User::class.java)
 
-                    var ketanggapan = (nilai!!.Nilai_1.toFloat()*12/144)*100
+                    var  ketanggapan = (nilai!!.Nilai_1.toFloat()*12/144)*100
                     var ketelitian = (nilai!!.Nilai_2.toFloat()*12/144)*100
                     var keuletan = (nilai!!.Nilai_3.toFloat()*12/144)*100
 

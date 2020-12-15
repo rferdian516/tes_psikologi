@@ -35,4 +35,21 @@
         android:text="Ganti"
         android:textColor="@color/white" />
 
+<!--    <ImageView-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:background="@drawable/ic_user"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_gambar"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_gravity="right"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:background="@drawable/custom_btn_update"-->
+<!--        android:text="Ganti"-->
+<!--        android:textColor="@color/white" />-->
+
 </LinearLayout>
