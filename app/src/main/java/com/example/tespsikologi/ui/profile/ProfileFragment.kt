@@ -15,6 +15,8 @@ import com.example.tespsikologi.ClusterActivity
 import com.example.tespsikologi.R
 import com.example.tespsikologi.UpdateProfileActivity
 import com.example.tespsikologi.auth.SignInActivity
+import com.example.tespsikologi.information.InfoActivity
+import com.example.tespsikologi.information.InfoAdapter
 import com.example.tespsikologi.model.User
 import com.example.tespsikologi.utils.MySharedPreferences
 import com.google.firebase.database.*
@@ -71,7 +73,11 @@ class ProfileFragment : Fragment() {
             requireActivity().finish()
         }
 
-        rlv_Gaya.setOnClickListener{
+        rlv_Info.setOnClickListener{
+            startActivity(Intent(this@ProfileFragment.context, InfoActivity::class.java))
+        }
+
+        rlv_Hasil.setOnClickListener{
             startActivity(Intent(this@ProfileFragment.context, ClusterActivity::class.java))
         }
 

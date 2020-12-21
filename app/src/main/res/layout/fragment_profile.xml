@@ -78,10 +78,46 @@
         android:layout_alignParentBottom="true">
 
         <RelativeLayout
-            android:id="@+id/rlv_Gaya"
+            android:id="@+id/rlv_Info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgInfo"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="16dp"
+                android:padding="16dp"
+                android:src="@drawable/ic_kelompok"
+                android:background="@drawable/custom_bg_kelompok"
+                />
+
+            <TextView
+                android:layout_toRightOf="@id/imgInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gaya Belajar"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_right"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout><RelativeLayout
+            android:id="@+id/rlv_Hasil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+        android:layout_marginTop="16dp">
 
             <ImageView
                 android:id="@+id/imgKelompok"
@@ -97,7 +133,7 @@
                 android:layout_toRightOf="@id/imgKelompok"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gaya Belajar"
+                android:text="Hasil Tes Saya"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:gravity="center"

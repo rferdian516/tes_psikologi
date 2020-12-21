@@ -33,4 +33,11 @@
     <string name="nama">Nama</string>
     <string name="gaya">Cara belajar yang tepat untuk anda adalah </string>
 
+    <string name="audiotori">AUDIOTORI</string>
+    <string name="visual">VISUAL</string>
+    <string name="kinestetik">KINESTETIK</string>
+
+    <string name="des_A">Gaya belajar auditori mengandalkan pendengaran untuk bisa memahami dan mengingat. Karakteristik model belajar seperti ini benar-benar menempatkan pendengaran sebagai alat utama menyerap informasi atau pengetahuan</string>
+    <string name="des_V">Gaya belajar visual menitikberatkan pada ketajaman penglihatan. Artinya, individu harus diperlihatkan terlebih dahulu agar benar-benar paham. Gaya belajar ini mengandalkan penglihatan atau melihat terlebih dahulu buktinya untuk kemudian bisa mempelajarinya</string>
+    <string name="des_K">Gaya belajar kinestetik mengaruskan individu yang bersangkutan menyentuh sesuatu yang memberikan informasi atau mempraktikan yang dipelajari agar bisa mengingatnya.</string>
 </resources>
