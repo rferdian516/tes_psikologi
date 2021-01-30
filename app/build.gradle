@@ -77,4 +77,8 @@ dependencies {
 
     //button nav
     implementation 'com.github.st235:expandablebottombar:1.3.0'
+
+    //recylcer view
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
 }

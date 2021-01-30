@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_brain"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".information.InfoActivity"></activity>
+        <activity android:name=".recyclerview.ListActivity"></activity>
+        <activity android:name=".information.InfoActivity" />
         <activity android:name=".InfoActivity" />
         <activity android:name=".ClusterActivity" />
         <activity android:name=".TesActivity" />

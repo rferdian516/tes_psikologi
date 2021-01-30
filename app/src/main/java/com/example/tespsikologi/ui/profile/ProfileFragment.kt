@@ -18,6 +18,7 @@ import com.example.tespsikologi.auth.SignInActivity
 import com.example.tespsikologi.information.InfoActivity
 import com.example.tespsikologi.information.InfoAdapter
 import com.example.tespsikologi.model.User
+import com.example.tespsikologi.recyclerview.ListActivity
 import com.example.tespsikologi.utils.MySharedPreferences
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_update_profile.*
@@ -31,7 +32,6 @@ class ProfileFragment : Fragment() {
     private lateinit var myPreferences: MySharedPreferences
     private lateinit var userId: String
     private lateinit var profileViewModel: ProfileViewModel
-    private val PHOTO = 1
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -79,6 +79,10 @@ class ProfileFragment : Fragment() {
 
         rlv_Hasil.setOnClickListener{
             startActivity(Intent(this@ProfileFragment.context, ClusterActivity::class.java))
+        }
+
+        rlv_ListData.setOnClickListener {
+            startActivity(Intent(this@ProfileFragment.context, ListActivity::class.java))
         }
 
         rlv_Edit.setOnClickListener {

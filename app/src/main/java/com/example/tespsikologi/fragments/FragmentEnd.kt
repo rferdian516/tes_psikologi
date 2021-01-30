@@ -86,10 +86,6 @@ class FragmentEnd : Fragment() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     mLoading.dismiss()
                     val nilai = snapshot.getValue(User::class.java)
-//                    tv_nilai1.setText(nilai?.Nilai_1)
-//                    tv_nilai2.setText(nilai?.Nilai_2)
-//                    tv_nilai3.setText(nilai?.Nilai_3)
-
                     //nilai C1
                     var A = (nilai!!.Nilai_1.toDouble()-c.C11)*(nilai!!.Nilai_1.toDouble()-c.C11)
 //                    var i : Double = pow(nilai!!.Nilai_1.toDouble()-c.C11)
@@ -100,7 +96,6 @@ class FragmentEnd : Fragment() {
                     //input C1
                     mDatabase.child(myPreferences.getValue("id")!!).child("hasil_1")
                         .setValue(C1.toString())
-
 
                     //nilai C2
                     var D = (nilai!!.Nilai_1.toDouble()-c.C21)*(nilai!!.Nilai_1.toDouble()-c.C21)
@@ -169,10 +164,6 @@ class FragmentEnd : Fragment() {
 
 
     }
-
-
-
-
 
     }
 
